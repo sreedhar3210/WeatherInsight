@@ -1,4 +1,19 @@
+.main_h1{
+    position: absolute;
+    top: 50px; /* Adjust the value to vertically position the heading */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    color: #FFA41B;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
 h1{
+    position: relative;
+    top: 60px;
+    align-items: center;
     color : #FFA41B;
 }
 
@@ -10,4 +25,19 @@ button{
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.background_image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;        /*it is like adding a new dimension higher the z-index the frontier the object appears*/
+}
+
+.text_box{
+    position: relative;
+    top: 120px;
 }

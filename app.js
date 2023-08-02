@@ -20,7 +20,8 @@ app.get("/", function(req,res){
 
 app.post("/",function(req,res){
     const cityName = req.body.city;
-    const url="https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + weatherApiKey + "&units=metric";
+    const units = req.body.unitType;
+    const url="https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + weatherApiKey + "&units=" + units;
     var temperature
     https.get(url,(response)=>{
         
@@ -29,6 +30,7 @@ app.post("/",function(req,res){
                 const weatherData=JSON.parse(data);
                 temperature = weatherData.main.temp;
                 console.log("the temperature at " + cityName + " is " + temperature);
+                res.redirect("/");
             })
         }
         else{

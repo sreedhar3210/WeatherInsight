@@ -8,10 +8,24 @@
     <title>Weather of a city</title>
 </head>
 <body>
+    <img class="background_image" src="images/background.jpg" alt="background_image">
+    <h1 class="main_h1">
+        🌞 Sun, ☔ Rain, or ❄️ Snow: We've Got You Covered
+    </h1>
     <h1>Enter a city</h1>
-    <form action="/" method="POST">
+    <form class="text_box"action="/" method="POST">
         <input type="text" name="city" placeholder="name of city">
         <button>submit</button>
+        <label>Select your preferred unit type:</label><br>
+        <input type="radio" id="standard" name="unitType" value="standard">
+        <label for="standard">Standard</label><br>
+
+        <input type="radio" id="metric" name="unitType" value="metric">
+        <label for="metric">Metric</label><br>
+
+        <input type="radio" id="imperial" name="unitType" value="imperial">
+        <label for="imperial">Imperial</label><br>
+
     </form>
 </body>
 </html>
